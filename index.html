@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Every Move in Cyberspace</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Public+Sans&display=swap');
+
+        /* alpinejs */
+        [x-cloak] { display: none !important; }
+
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #app {
+            background-color: black;
+            background-size: cover;
+            color: hotpink;
+            display: grid;
+            place-items: center;
+            height: calc(100vh - 2em);
+            padding: 1em;
+            font-family: 'Merriweather', serif;
+            font-size:3em;
+        }
+
+        pre{
+            z-index: 2;
+        }
+
+        .cyberspaceBG {
+            transform: scale3d(1, 1, 1) rotateX(54deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+            background-color: aqua;
+            height: 100vh;
+            width: 100vw;
+        }
+        .cyberspaceBG-wrap {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            perspective: 260px;
+            perspective-origin: 50% 50%;
+        }
+
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="chance.min.js"></script>
+    <div id="app" x-data="d">
+        <pre>G   A   M   E</pre>
+        <div class="cyberspaceBG-wrap">
+            <div class="cyberspaceBG"> </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('d', () => (Object.assign({
+                async init() {
+                },
+            }, {})))
+        });
+    </script>
+</body>
+
+</html>
