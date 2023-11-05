@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="normalize.css">
     <title>Every Move in Cyberspace</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Public+Sans&display=swap');
-
-        /* alpinejs */
-        [x-cloak] { display: none !important; }
 
         body {
             height: 100%;
@@ -23,13 +19,11 @@
         
         #app {
             background-color: black;
-            background-size: cover;
             color: hotpink;
             display: grid;
             place-items: center;
             height: calc(100vh - 2em);
             padding: 1em;
-            font-family: 'Merriweather', serif;
             font-size:3em;
         }
 
@@ -55,28 +49,18 @@
 
     </style>
 
-    <script>
-
-    </script>
 </head>
 
 <body>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="chance.min.js"></script>
-    <div id="app" x-data="d">
+    <div id="app">
+        <audio preload="audio" autobuffer autoplay>
+            <source src="floralshoppe.mp3">
+        </audio>
         <pre>G   A   M   E</pre>
         <div class="cyberspaceBG-wrap">
             <div class="cyberspaceBG"> </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('d', () => (Object.assign({
-                async init() {
-                },
-            }, {})))
-        });
-    </script>
 </body>
 
 </html>
